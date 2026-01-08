@@ -4,6 +4,22 @@
 #ifndef PATCH_H
 #define PATCH_H
 
+
+/*-----------------------------------------
+Patch_embedding：任意のカーネルサイズでのpatch_embedding処理が行えます。
+must：input_tensor, weight_tensor
+
+explanation：
+　input_tensorが入力画像もしくは特徴マップ、weight_tensorが重み行列です。
+　weight_tensorのOC(output_channel)、H(height)、W(width)からカーネルサイズを取得します。
+　関数内で自動的に出力Tensor形状が計算され、自動的にmake_Tensor関数によりメモリ確保が行われます。
+　
+//!!注意!!//
+　//!現状、カーネルサイズで割り切れない入力画像に対する例外処理がないため、割り切れる画像サイズであることを確認してください！
+　//!また、カーネルサイズは正方形で固定になってます！
+　//!パディング処理は記述されてません！
+  //!入力画像の配置は必ず「HWC」順にしてください！「CHW」順には対応していません！
+-------------------------------------------*/
 Tensor* Patch_embedding(Tensor* input_tensor, W_Tensor* weight_tensor);
 
 #endif
