@@ -60,7 +60,7 @@ explanation：
 void print_W_Tensor(W_Tensor* W_Tensor, int show_tensor_contents);
 
 
-
+void print_B_Tensor(B_Tensor* bt, int show_tensor_contents);
 
 
 

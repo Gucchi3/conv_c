@@ -148,3 +148,21 @@ void print_W_Tensor(W_Tensor* wt, int show_tensor_contents){
     }
   }
 }
+
+//@note print_B_Tensor 関数
+void print_B_Tensor(B_Tensor* bt, int show_tensor_contents){
+  if (!bt){
+    printf("B_Tensor is NULL (No Bias)\n");
+    return;
+  }
+  printf("=== B_Tensor Structure ===\n");
+  printf("  Shape : OC=%d\n", bt->OC);
+  if(show_tensor_contents){
+    printf("  Data  : [ ");
+    for(int i=0; i < bt->OC; i++){
+        printf("%6.2f", bt->data[i]);
+        if(i < bt->OC - 1) printf(", ");
+    }
+  }
+  printf(" ]\n\n");
+}

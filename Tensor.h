@@ -39,7 +39,16 @@ typedef struct{
   const float *data;
 } W_Tensor;
 
+/*-----------------------------------------------------------
+B_Tensor構造体：バイアスのための構造体
 
-
+//*explanation
+OC：要素数
+*data：データが入っている番地
+-------------------------------------------------------------*/
+typedef struct{
+  int OC;
+  const float* data;
+} B_Tensor;
 
 #endif

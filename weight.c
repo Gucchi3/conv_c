@@ -30,3 +30,9 @@ W_Tensor patch_weight = {
   .W = 3,
   .data = patch_embed_weight
 };
+
+
+B_Tensor conv_bias = {
+    .OC = 3,
+    .data = conv1_bias_data
+};

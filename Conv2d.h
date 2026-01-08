@@ -17,7 +17,7 @@ explanation：
 　//! カーネルは正方形しか保守されません！長方形は保守不可！無理！
 　//! 無理なカーネルやストライド等の値を入力すると、正常に動作しない可能性があります！保守不可！
 -----------------------------------------------------*/
-Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, int stride, int padding);
+Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor,B_Tensor* bias_tensor,  int stride, int padding);
 
 
 

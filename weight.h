@@ -47,4 +47,7 @@ static const float patch_embed_weight[81] = {
 
 extern W_Tensor patch_weight;
 
+
+static const float conv1_bias_data[3] = { 0.1f, -0.5f, 0.01f };
+extern B_Tensor conv_bias;
 #endif

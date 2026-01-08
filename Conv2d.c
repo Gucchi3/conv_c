@@ -1,6 +1,6 @@
 //*---------------------------------note-----------------------------------------
 //*
-//*                           next --> add "bias"
+//*                               Nothing now...
 //*
 //*------------------------------------------------------------------------------
 
@@ -13,11 +13,11 @@
 #include "utils.h"
 
 
-Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, int stride, int padding){
+Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding){
   // 代入
   int kernel_size = weight_tensor->H; int output_channel = weight_tensor->OC;
   // 引数例外処理
-  if (!input_tensor || kernel_size <= 0 || output_channel <= 0 || stride <= 0 || padding < 0) {
+  if (!input_tensor || kernel_size <= 0 || output_channel <= 0 || stride <= 0 || padding < 0 || (bias_tensor && bias_tensor->OC != output_channel)) {
     printf("Error：----- 引数が足りないか、Tensorが空です。 -----\n");
     //free_Tensor(input_tensor);
     return NULL;
@@ -53,7 +53,7 @@ Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, int stride, int pa
       int in_lt_w = (w * stride) - padding; 
       for(int oc=0; oc < output_tensor->C; oc++){
         // 重み初期化
-        float sum = 0.0f;
+        float sum = (bias_tensor) ? bias_tensor->data[oc] : 0.0f;
         for(int kh=0; kh < kernel_size; kh++){
           for(int kw=0; kw < kernel_size; kw++){
             // 計算座標計算
@@ -68,6 +68,7 @@ Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, int stride, int pa
             int in_idx = ((in_h * input_tensor->W) + in_w) * input_tensor->C;
             const float* in_point = &input_tensor->data[in_idx];
             for(int kc=0; kc < input_tensor->C; kc++){
+              // 乗算 -> 加算　
               sum += *in_point++ * *weight_point++;
             }
           }
@@ -77,9 +78,8 @@ Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, int stride, int pa
     }
   }
 
-
-
   // return
   return output_tensor ;
 }
+
 
