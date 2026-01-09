@@ -41,6 +41,8 @@ Tools to bridge the gap between PyTorch training and C inference.
 | Tool | Function | Status | Note |
 | :--- | :--- | :---: | :--- |
 | **Weight Exporter** | `.pth` (PyTorch) $\to$ `.h` (C Header) | ⏳ Todo | Auto-generates `W_Tensor` / `B_Tensor` arrays |
+|**Permute**|HWC -> CHW|⏳ Todo|Auto permute HWC -> CHW|
+||CHW -> HWC|⏳ Todo|Auto permute CHW -> HWC|
 
 
 ## 🛠 Usage Example
