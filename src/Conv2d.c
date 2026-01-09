@@ -174,3 +174,22 @@ if( act_type == 0){
   // return
   return output_tensor ;
 }
+
+
+Tensor* PConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor){
+  // comming soon...
+}
+
+
+Tensor* PConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, const char* act){
+  // comming soon...
+}
+
+
+Tensor* DConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding){
+  // comming soon...
+}
+
+Tensor* DConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding, const char* act){
+// comming soon...
+}

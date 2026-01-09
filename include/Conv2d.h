@@ -41,4 +41,27 @@ explanation：
 -----------------------------------------------------*/
 Tensor* Conv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding, char act);
 
+/*---------------------------------------------------
+PConv2d：comming soon...
+-----------------------------------------------------*/
+Tensor* PConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor);
+
+
+/*---------------------------------------------------
+PConv2d_BN_ACT：comming soon...
+-----------------------------------------------------*/
+Tensor* PConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, const char* act);
+
+
+/*---------------------------------------------------
+DConv2d：comming soon...
+-----------------------------------------------------*/
+Tensor* DConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding);
+
+
+/*---------------------------------------------------
+DConv2d_BN_ACT：comming soon...
+-----------------------------------------------------*/
+Tensor* DConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding, const char* act);
+
 #endif 
