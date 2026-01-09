@@ -83,3 +83,6 @@ Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_ten
 }
 
 
+Tensor* Conv2d_BN_RELU(Tensor* input_tensor, W_Tensor* weight, B_Tensor* bias_tensor, int stride, int padding){
+// Now building...
+}
