@@ -23,10 +23,12 @@ This project is currently under heavy development. Many features are still missi
 | Category | Operator / Module | Status | Note |
 | :--- | :--- | :---: | :--- |
 | **Convolution** | Conv2d (HWC) | ✅ Done | Supports Stride, Padding, Bias |
+||Conv2d_BN_ACT|✅ Done| Conv2d(including BN) + ACT|
 | | Pointwise / Depthwise | ⏳ Todo | |
 | **Normalization** | Batch Norm | 🚧 **Now** | To be fused into Conv for inference |
 | | Layer Norm | ⏳ Todo | |
 | **Activation** | **ReLU** | ✅ Done | **Current Focus** |
+| | RELU6 |✅ Done||
 | | SiLU | ✅ Done | Required for Mamba blocks |
 | **Linear** | Linear (Dense) | ⏳ Todo | |
 | **Attention** | Self-Attention (QKV) | ⏳ Todo | Multi-Head Attention |
