@@ -24,10 +24,10 @@ This project is currently under heavy development. Many features are still missi
 | :--- | :--- | :---: | :--- |
 | **Convolution** | Conv2d (HWC) | ✅ Done | Supports Stride, Padding, Bias |
 | | Pointwise / Depthwise | ⏳ Todo | |
-| **Normalization** | Batch Norm | ⏳ Todo | To be fused into Conv for inference |
+| **Normalization** | Batch Norm | 🚧 **Now** | To be fused into Conv for inference |
 | | Layer Norm | ⏳ Todo | |
-| **Activation** | **ReLU** | 🚧 **Now** | **Current Focus** |
-| | SiLU | ⏳ Todo | Required for Mamba blocks |
+| **Activation** | **ReLU** | ✅ Done | **Current Focus** |
+| | SiLU | ✅ Done | Required for Mamba blocks |
 | **Linear** | Linear (Dense) | ⏳ Todo | |
 | **Attention** | Self-Attention (QKV) | ⏳ Todo | Multi-Head Attention |
 | **Mamba**| **Efficient VMamba S6** | ⏳ Todo | The ultimate goal |
