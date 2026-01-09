@@ -1,4 +1,4 @@
-#include "Tensor.h"
+#include "../Tensor.h"
 #include <math.h>
 
 
@@ -25,27 +25,3 @@ Tensor* SiLU(Tensor* input_tensor){
   }
   return input_tensor;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

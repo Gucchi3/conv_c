@@ -1,4 +1,4 @@
-#include "Tensor.h"
+#include "../Tensor.h"
 #ifndef UTILS_H
 #define UTILS_H
 
@@ -47,6 +47,7 @@ explanation：
 　重みのW_Tensorはprint_W_Tensorが使用できます。
 -----------------------------------------------------*/
 void print_Tensor(Tensor* Tensor, int show_tensor_contents);
+
 
 /*---------------------------------------------------
 print_W_Tensor：引数のW_Tensorの形状、アドレス、中身を表示します。
