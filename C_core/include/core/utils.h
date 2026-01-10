@@ -1,6 +1,7 @@
-#include "../../Tensor.h"
 #ifndef UTILS_H
 #define UTILS_H
+
+#include "Tensor.h"
 
 /* -------------------------------------------------
 make_Tensor：Tensor構造体を作成します。

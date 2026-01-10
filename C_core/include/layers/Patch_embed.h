@@ -6,11 +6,10 @@
 
 
 
-#include "Tensor.h"
-
-
 #ifndef PATCH_H
 #define PATCH_H
+
+#include "../core/Tensor.h"
 
 
 /*-----------------------------------------

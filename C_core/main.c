@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "./C_tools/include/utils.h"
-#include "input.h"
-//#include "Patch_embed.h"
-#include "weight.h"
-#include "./C_tools/include/Conv2d.h"
+#include "include/core/utils.h"
+#include "../generated/input.h"
+#include "../generated/weight.h"
+#include "include/layers/Conv2d.h"
 
 //@note main 関数
 int main(void){

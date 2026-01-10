@@ -1,4 +1,7 @@
-#include "../Tensor.h"
+#ifndef ACT_H
+#define ACT_H
+
+#include "../core/Tensor.h"
 
 
 
@@ -31,3 +34,5 @@ explanation：
 x = x / (1 + e^(-x)) を提供します。
 ------------------------------------------------------*/
 Tensor* SiLU(Tensor* input_tensor);
+
+#endif

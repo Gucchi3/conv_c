@@ -1,4 +1,7 @@
-#include "../../Tensor.h"
+#ifndef LINEAR_H
+#define LINEAR_H
+
+#include "../core/Tensor.h"
 
 /*-----------------------------------------
 Linear：ごく一般的な線形層を提供します。
@@ -17,3 +20,8 @@ explanation：
 
 -------------------------------------------*/
 Tensor* Linear(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor);
+
+
+
+
+#endif

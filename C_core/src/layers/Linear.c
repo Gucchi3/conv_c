@@ -1,8 +1,8 @@
-#include "../../Tensor.h"
-#include "stdio.h"
-#include "stdlib.h"
-#include "math.h"
-#include "../include/utils.h"
+#include "../../include/core/Tensor.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "../../include/core/utils.h"
 
 
 

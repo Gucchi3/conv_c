@@ -2,8 +2,8 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../Tensor.h"
-#include "../include/utils.h"
+#include "../../include/core/Tensor.h"
+#include "../../include/core/utils.h"
 
 
 Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding){
