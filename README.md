@@ -49,6 +49,8 @@ The project currently focuses on implementing a standard CNN. Advanced architect
 | **Activation** | **ReLU** | ✅ Done | |
 | | RELU6 |✅ Done||
 | | SiLU | ✅ Done | Required for Mamba blocks |
+| | Sigmoid | ⏳ Todo | |
+| | Softmax | ⏳ Todo | |
 | **Attention** | **Self-Attention (QKV)** | ⏳ Todo | Postponed until CNN is complete. |
 | **Mamba**| **Efficient VMamba S6** | ⏳ Todo | Postponed until CNN is complete. |
 
