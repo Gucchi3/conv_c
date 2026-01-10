@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../Tensor.h"
+#include "../../Tensor.h"
 #include "../include/utils.h"
 
 

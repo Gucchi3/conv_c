@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include "Tensor.h"
-#include "utils.h"
+#include "../include/utils.h"
 
 
 //@note Patch_embedding

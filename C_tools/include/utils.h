@@ -1,4 +1,4 @@
-#include "../Tensor.h"
+#include "../../Tensor.h"
 #ifndef UTILS_H
 #define UTILS_H
 
