@@ -23,6 +23,10 @@ The project currently focuses on implementing a standard CNN. Advanced architect
    - Verify operation on actual Microcontrollers (Arduino/STM32/ESP32...).
 3. **Phase 3: Advanced Architectures**
    - Implement Vision Transformer (ViT) and Mamba (SSM) blocks.
+4. **Phase 4: INT8 Quantization Support**
+   - Develop INT8 quantized models and integer-only inference kernels to reduce memory usage and improve efficiency.
+5. **Phase 5: Hardware-Specific SIMD Optimization**
+   - Add SIMD instruction support for specific hardware (e.g., CV32E40P(PULP)) to accelerate inference speed.
 
 ## 📊 Implementation Status
 🚧 **Work in Progress**
