@@ -1,5 +1,6 @@
 #include "../../include/core/Tensor.h"
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <math.h>
 #include "../../include/core/utils.h"
@@ -16,13 +17,13 @@ if (!input_tensor || !weight_tensor){
 }
 
 // 出力Tensor形状計算
-int output_tensor_H = 1;
-int output_tensor_W = 1;
-int output_tensor_C = weight_tensor->OC;
+int32_t output_tensor_H = 1;
+int32_t output_tensor_W = 1;
+int32_t output_tensor_C = weight_tensor->OC;
 
 // 出力Tensor形状例外処理
-const int input_total_size = input_tensor->H * input_tensor->W * input_tensor->C;
-const int expected_total_size = weight_tensor->H * weight_tensor->W * weight_tensor->INC;
+const int32_t input_total_size = input_tensor->H * input_tensor->W * input_tensor->C;
+const int32_t expected_total_size = weight_tensor->H * weight_tensor->W * weight_tensor->INC;
 if (output_tensor_C <= 0 || (input_total_size != expected_total_size)){
   return NULL;
 }
@@ -37,13 +38,13 @@ if (!output_tensor){
   const float* weight_point = weight_tensor->data;
   float* output_point = output_tensor->data;
 
-  for(int oc=0; oc < output_tensor->C; oc++){
+  for(int32_t oc=0; oc < output_tensor->C; oc++){
     // 画像データ先頭ポインタ格納
     const float* input_point = input_tensor->data;
     // 重み初期化(biasがある場合は事前に加算しておく)
     float sum = (bias_tensor)? bias_tensor->data[oc] : 0.0f;
 
-    for(int i=0; i < input_total_size; i++){
+    for(int32_t i=0; i < input_total_size; i++){
       sum += *input_point++ * *weight_point++;
     }
     // 格納

@@ -18,7 +18,7 @@ explanation：
 　//! カーネルは正方形しか保守されません！長方形は保守不可！無理！
 　//! 無理なカーネルやストライド等の値を入力すると、正常に動作しない可能性があります！保守不可！
 -----------------------------------------------------*/
-Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor,  int stride, int padding);
+Tensor* Conv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor,  int32_t stride, int32_t padding);
 
 
 /* -------------------------------------------------
@@ -40,7 +40,7 @@ explanation：
 　//! この関数はBN層をConb2dの重みに吸収してある前提の関数です。
 　//! バッチ正規化の処理は記述されていません。数学的に統合してください！
 -----------------------------------------------------*/
-Tensor* Conv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding, char act);
+Tensor* Conv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int32_t stride, int32_t padding, char act);
 
 /*---------------------------------------------------
 PConv2d：comming soon...
@@ -57,12 +57,12 @@ Tensor* PConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* 
 /*---------------------------------------------------
 DConv2d：comming soon...
 -----------------------------------------------------*/
-Tensor* DConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding);
+Tensor* DConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int32_t stride, int32_t padding);
 
 
 /*---------------------------------------------------
 DConv2d_BN_ACT：comming soon...
 -----------------------------------------------------*/
-Tensor* DConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int stride, int padding, const char* act);
+Tensor* DConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int32_t stride, int32_t padding, const char* act);
 
 #endif 

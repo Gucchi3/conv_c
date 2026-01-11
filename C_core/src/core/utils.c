@@ -9,7 +9,7 @@
 
 
 //@note make_Tensor 関数
-Tensor* make_Tensor(int H,int W,int C){
+Tensor* make_Tensor(int32_t H, int32_t W, int32_t C){
   // 特徴マップの構造体を定義
   Tensor *feat = (Tensor*)malloc(sizeof(Tensor)); 
   // 確保したTensorがNULLでないか確認　
@@ -26,7 +26,7 @@ Tensor* make_Tensor(int H,int W,int C){
 
 
 //@note make_Tensor_from_array 関数
-Tensor* make_Tensor_from_array(int H, int W, int C, const float* init_data){
+Tensor* make_Tensor_from_array(int32_t H, int32_t W, int32_t C, const float* init_data){
   // 入力画像データの構造体を定義
   Tensor* image = (Tensor*)malloc(sizeof(Tensor));
   // 確保したTensorがNULLでないか確認
@@ -62,7 +62,7 @@ void free_Tensor(Tensor* Tensor){
 
 
 //@note print_Tensor 関数
-void print_Tensor(Tensor* t, int show_tensor_contents){
+void print_Tensor(Tensor* t, int32_t show_tensor_contents){
   if (!t){
     printf("Error: Tensor is NULL.\n");
     return;
@@ -75,19 +75,19 @@ void print_Tensor(Tensor* t, int show_tensor_contents){
 
   if(show_tensor_contents){
     printf("--- Data Content ---\n");
-    int total_pixels = t->H * t->W;
+    int32_t total_pixels = t->H * t->W;
     
     // データが多すぎる場合の安全策（必要ならコメントアウト解除）
     // if (total_pixels > 200) { printf(" (Too large to print all...)\n"); return; }
 
-    for(int h = 0; h < t->H; h++){
+    for(int32_t h = 0; h < t->H; h++){
       printf("Row %2d: ", h); // 行番号表示
       
-      for(int w = 0; w < t->W; w++){
+      for(int32_t w = 0; w < t->W; w++){
         printf("[");
-        for(int c = 0; c < t->C; c++){
+        for(int32_t c = 0; c < t->C; c++){
           // index計算
-          int idx = ((h * t->W) + w) * t->C + c;
+          int32_t idx = ((h * t->W) + w) * t->C + c;
           
           // 値表示 (7.2f で桁を揃える)
           printf("%7.2f", t->data[idx]);
@@ -104,7 +104,7 @@ void print_Tensor(Tensor* t, int show_tensor_contents){
 }
 
 //@note print_WTensor 関数
-void print_W_Tensor(W_Tensor* wt, int show_tensor_contents){
+void print_W_Tensor(W_Tensor* wt, int32_t show_tensor_contents){
   if (!wt){
     printf("Error: W_Tensor is NULL.\n");
     return;
@@ -120,18 +120,18 @@ void print_W_Tensor(W_Tensor* wt, int show_tensor_contents){
     
     // データ順序: [OC][H][W][INC]
     
-    for(int oc = 0; oc < wt->OC; oc++){
+    for(int32_t oc = 0; oc < wt->OC; oc++){
       printf("Filter %2d (OC=%d):\n", oc, oc); // フィルタごとの見出し
       
-      for(int h = 0; h < wt->H; h++){
+      for(int32_t h = 0; h < wt->H; h++){
         printf("  Row %2d: ", h); // カーネルの行番号
         
-        for(int w = 0; w < wt->W; w++){
+        for(int32_t w = 0; w < wt->W; w++){
           printf("[");
-          for(int inc = 0; inc < wt->INC; inc++){
+          for(int32_t inc = 0; inc < wt->INC; inc++){
             // 4次元インデックス計算
             // index = oc*(H*W*INC) + h*(W*INC) + w*(INC) + inc
-            int idx = (oc * wt->H * wt->W * wt->INC) + 
+            int32_t idx = (oc * wt->H * wt->W * wt->INC) + 
                       (h  * wt->W * wt->INC) + 
                       (w  * wt->INC) + inc;
 
@@ -150,7 +150,7 @@ void print_W_Tensor(W_Tensor* wt, int show_tensor_contents){
 }
 
 //@note print_B_Tensor 関数
-void print_B_Tensor(B_Tensor* bt, int show_tensor_contents){
+void print_B_Tensor(B_Tensor* bt, int32_t show_tensor_contents){
   if (!bt){
     printf("B_Tensor is NULL (No Bias)\n");
     return;
@@ -159,7 +159,7 @@ void print_B_Tensor(B_Tensor* bt, int show_tensor_contents){
   printf("  Shape : OC=%d\n", bt->OC);
   if(show_tensor_contents){
     printf("  Data  : [ ");
-    for(int i=0; i < bt->OC; i++){
+    for(int32_t i=0; i < bt->OC; i++){
         printf("%6.2f", bt->data[i]);
         if(i < bt->OC - 1) printf(", ");
     }

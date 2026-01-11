@@ -14,7 +14,7 @@ explanation：
 　ただし、メモリ確保だけは行われます。
 　H,W,Cのみ作成され、かつメモリ確保が行われます。
 -----------------------------------------------------*/
-Tensor* make_Tensor(int H, int W, int C);
+Tensor* make_Tensor(int32_t H, int32_t W, int32_t C);
 
 /*---------------------------------------------------
 make_Tensor_from_array：Tensor構造体の作成及び、*dataに事前に定義してある配列をコピーします。
@@ -26,7 +26,7 @@ explanation：
 　また、init_dataのサイズは、H*W*Cと一致している必要があります。
 　Tensor構造体については、Tensor.hを確認してください。
 -----------------------------------------------------*/
-Tensor* make_Tensor_from_array(int H, int W, int C, const float* init_data);
+Tensor* make_Tensor_from_array(int32_t H, int32_t W, int32_t C, const float* init_data);
 
 /*---------------------------------------------------
 free_Tensor：引数のTensor構造体のメモリを開放します。
@@ -47,7 +47,7 @@ explanation：
 　show_tensor_contentsに0以外の整数を渡すことで、*dataの中身も表示することができます。
 　重みのW_Tensorはprint_W_Tensorが使用できます。
 -----------------------------------------------------*/
-void print_Tensor(Tensor* Tensor, int show_tensor_contents);
+void print_Tensor(Tensor* Tensor, int32_t show_tensor_contents);
 
 
 /*---------------------------------------------------
@@ -59,10 +59,10 @@ explanation：
 　show_tensor_contentsに0以外を渡すことで、*dataの中身を表示できます。
 　通常のTensorはprint_Tensorが使用できます。
 -----------------------------------------------------*/
-void print_W_Tensor(W_Tensor* W_Tensor, int show_tensor_contents);
+void print_W_Tensor(W_Tensor* W_Tensor, int32_t show_tensor_contents);
 
 
-void print_B_Tensor(B_Tensor* bt, int show_tensor_contents);
+void print_B_Tensor(B_Tensor* bt, int32_t show_tensor_contents);
 
 
 

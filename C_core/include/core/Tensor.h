@@ -2,6 +2,8 @@
 #ifndef TENSOR_H
 #define TENSOR_H
 
+#include <stdint.h>
+
 /*-------------------------------------------------------
 Tensor構造体：入力画像、特徴マップのための構造体
 
@@ -19,7 +21,7 @@ C：チャンネル数
 -----------------------------------------------------------*/
 //@note Tensor型の定義
 typedef struct {
-  int H, W, C;
+  int32_t H, W, C;
   float *data;
 } Tensor;
 
@@ -35,7 +37,7 @@ OC：出力CH
 *data：データが入っている番地
 -------------------------------------------------------------*/
 typedef struct{
-  int OC, INC, H, W;
+  int32_t OC, INC, H, W;
   const float *data;
 } W_Tensor;
 
@@ -47,7 +49,7 @@ OC：要素数
 *data：データが入っている番地
 -------------------------------------------------------------*/
 typedef struct{
-  int OC;
+  int32_t OC;
   const float* data;
 } B_Tensor;
 
