@@ -26,7 +26,7 @@ The project currently focuses on implementing a standard CNN. Advanced architect
 1. **Phase 1: Basic CNN Implementation** (Current Focus)
    - Implement essential layers (Conv2d, Activation, Pooling, Linear).
 2. **Phase 2: MCU Verification**
-   - Verify operation on actual Microcontrollers (GAP8/STM32/RISC-V).
+   - Verify operation on actual Microcontrollers (Arduino/STM32/ESP32...).
 3. **Phase 3: Advanced Architectures**
    - Implement Vision Transformer (ViT) and Mamba (SSM) blocks.
 
