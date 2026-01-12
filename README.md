@@ -88,7 +88,6 @@ CMake automatically handles dependencies and cross-platform build configurations
 
 1. **Configure** (Prepare the build directory):
    ```bash
-   # Configure for Release mode (DEBUG=0)
    cmake -S . -B build -DCMAKE_C_FLAGS="-DDEBUG=0"
    ```
    *(Or simply `cmake -S . -B build` if you set the default in CMakeLists.txt)*
