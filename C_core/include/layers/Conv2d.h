@@ -42,22 +42,20 @@ explanation：
 -----------------------------------------------------*/
 Tensor* Conv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int32_t stride, int32_t padding, char act);
 
-/*---------------------------------------------------
-PConv2d：comming soon...
------------------------------------------------------*/
-Tensor* PConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor);
+
 
 
 /*---------------------------------------------------
-PConv2d_BN_ACT：comming soon...
+//! --- 未検証 ---
+PConv2d_BN_ACT：Pointwise_Conv+BNを提供します。
+must：input_tensor, weight_tensor
+
+explanation：
+　Pointwise Convを"HWC"順で提供する。
+　Activationはact.hに作成されている物が対応可能。
 -----------------------------------------------------*/
 Tensor* PConv2d_BN_ACT(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, const char* act);
 
-
-/*---------------------------------------------------
-DConv2d：comming soon...
------------------------------------------------------*/
-Tensor* DConv2d(Tensor* input_tensor, W_Tensor* weight_tensor, B_Tensor* bias_tensor, int32_t stride, int32_t padding);
 
 
 /*---------------------------------------------------
