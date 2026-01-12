@@ -8,25 +8,6 @@ A lightweight, zero-dependency C implementation of deep learning operators, targ
 
 The goal is to achieve **maximum portability** across any processor architecture (x86, ARM, RISC-V, DSPs, MCUs) by using standard C99 without external libraries.
 
-## 🚀 Key Features
-- **Pure C implementation**: No C++, no heavy frameworks (PyTorch/TensorFlow).
-- **Hardware Agnostic**: Compiles on any platform with a standard C compiler.
-- **Embedded Optimization**: Efficient pointer arithmetic and memory management designed for resource-constrained devices.
-
-
-## 🗺️ Development Roadmap
-The project currently focuses on implementing a standard CNN. Advanced architectures like Mamba will be addressed in later phases.
-
-1. **Phase 1: Basic CNN Implementation** (Current Focus)
-   - Implement essential layers (Conv2d, Activation, Pooling, Linear).
-2. **Phase 2: MCU Verification**
-   - Verify operation on actual Microcontrollers (Arduino/STM32/ESP32...).
-3. **Phase 3: Advanced Architectures**
-   - Implement Vision Transformer (ViT) and Mamba (SSM) blocks.
-4. **Phase 4: INT8 Quantization Support**
-   - Develop INT8 quantized models and integer-only inference kernels to reduce memory usage and improve efficiency.
-5. **Phase 5: Hardware-Specific SIMD Optimization**
-   - Add SIMD instruction support for specific hardware (e.g., CV32E40P(PULP)) to accelerate inference speed.
 
 ## 📊 Implementation Status
 🚧 **Work in Progress**
