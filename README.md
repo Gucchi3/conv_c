@@ -1,3 +1,6 @@
+# 今後
+int8量子化と双方向スタックに対応するために**廃棄予定**。
+
 # PureC-DL-Kernels
 ![Language](https://img.shields.io/badge/language-C99-blue)
 ![Platform](https://img.shields.io/badge/platform-Any%20%28x86%2FARM%2FRISC--V%29-green)
@@ -31,7 +34,7 @@ The goal is to achieve **maximum portability** across any processor architecture
 | | Sigmoid | ⏳ Todo | |
 | | Softmax | ⏳ Todo | |
 | **Attention** | **Self-Attention (QKV)** | ⏳ Todo | Postponed until CNN is complete. |
-| **Mamba**| **Efficient VMamba S6** | ⏳ Todo | Postponed until CNN is complete. |
+| **Mamba**| **Efficient VMamba S6** | 🚫 Suspended| Postponed until CNN is complete. |
 
 ## 🛠 Utilities (Python)
 
